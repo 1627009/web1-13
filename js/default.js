@@ -4,10 +4,11 @@ function getFileName(){
 
 var filename = getFileName();
 var opt;
-if(filename === 'other.html')
+if(filename === 'other.html'){
   opt = document.querySelecter('option[value="other.html"]');
-else
+}else{
   opt = document.querySelecter('option[value="index.html"]');
+}
 opt.selected = true;
 
 document.getElementById('form').select.onchange = function(){
