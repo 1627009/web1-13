@@ -1,3 +1,5 @@
+//クッキー
+
 function setCookie(c_name,value,expiredays){
   var extime = new Date().getTime();
   var cltime = new Date(extime + (60*60*24*1000*expiredays));
@@ -39,22 +41,29 @@ else
 var current_time = new Date();
 setCookie('lastDate', current_time.toString(), 7);
 
+document.getElementById('remove_cookie').onsubmit = function(){
+  setCookie('lastDate', "", 0);
+}
+
+//ページ移動
+
 function getFileName(){
   return window.location.href.split('/').pop();
 }
 
 var filename = getFileName();
 var opt;
-if(filename === 'other.html'){
+if(filename === 'other.html')
   opt = document.querySelector('option[value="other.html"]');
-}else{
+else
   opt = document.querySelector('option[value="index.html"]');
-}
 opt.selected = true;
 
 document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
+
+//オリンピックタイム
 
 var separate_time = function(time){
   var sec   = Math.floor((time / 1000) % 60);
