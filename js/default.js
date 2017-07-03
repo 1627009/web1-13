@@ -1,3 +1,11 @@
+//画像差し替え
+var thmubs = document.querySelectorAll('.thumb');
+for(idx in thmubs){
+  thmubs[idx].onclick = function(){
+    ducument.getElementById("bigimg").src = 'img/' + this.dataset.image + '.JPG';
+  }
+}
+
 //クッキー
 
 function setCookie(c_name,value,expiredays){
