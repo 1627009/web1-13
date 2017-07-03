@@ -63,6 +63,8 @@ document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
 
+//オリンピック
+
 var separate_time = function(time){
   var sec   = Math.floor((time / 1000) % 60);
   var min   = Math.floor((time / 1000 / 60) % 60);
