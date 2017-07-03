@@ -4,7 +4,7 @@ function getFileName(){
 
 var filename = getFileName();
 var opt;
-id(filename === 'other.html')
+if(filename === 'other.html')
   opt = document.querySelecter('option[value="other.html"]');
 else
   opt = document.querySelecter('option[value="index.html"]');
